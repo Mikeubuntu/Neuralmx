@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Studio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="IMG/PNG/neural.png" type="image/x-icon">
+
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        h1, h2, h3, p {
+            color: #fff;
+        }
+
+        /* Estilos para el carrusel */
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Portada */
+        .cover-image {
+            height: 100vh;
+            background: url() no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .cover-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .logo-img {
+            max-width: 100%;
+            height: auto;
+            width: 300px; /* Ajusta este valor según el tamaño que quieras para el logo */
+        }
+
+        /* Ajuste responsivo de textos */
+        .cover-text h1 {
+            font-size: 4rem;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .cover-text h1 {
+                font-size: 2.5rem; /* Texto más pequeño en pantallas pequeñas */
+            }
+
+            .carousel-caption {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .cover-text h1 {
+                font-size: 2rem; /* Texto aún más pequeño en pantallas móviles */
+            }
+
+            .carousel-caption {
+                font-size: 0.8rem;
+                padding: 5px;
+            }
+        }
+
+        .carousel-caption h2 {
+            font-size: 2rem;
+        }
+
+        .carousel-caption p {
+            font-size: 1rem;
+        }
+
+        /* Ajustes para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .carousel-caption h2 {
+                font-size: 1.5rem; /* Ajusta el tamaño del título para pantallas más pequeñas */
+            }
+
+            .carousel-caption p {
+                font-size: 0.9rem; /* Texto un poco más pequeño para que sea legible en móviles */
+            }
+
+            .carousel-caption {
+                padding: 10px; /* Menos espacio en pantallas más pequeñas */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .carousel-caption h2 {
+                font-size: 1.2rem; /* Título aún más pequeño en pantallas móviles */
+            }
+
+            .carousel-caption p {
+                font-size: 0.8rem;
+            }
+
+            .carousel-caption {
+                padding: 5px; /* Reduce aún más el padding en pantallas pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Imagen de portada -->
+    <section class="cover-image">
+        <div class="cover-text">
+            <img src="IMG/PNG/white.png" alt="Logo de Neural" class="logo-img img-fluid">
+            <p>Pasado, presente, futuro</p>
+        </div>
+    </section>
+
+    <!-- Visor 3D Spline -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.27/build/spline-viewer.js"></script>
+    <spline-viewer hint loading-anim-type="spinner-small-light" url="https://prod.spline.design/z2JAadQZJbJDN6fZ/scene.splinecode"></spline-viewer>
+    <!-- Carrusel -->
+    <section id="portfolio">
+        <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="IMG/JPG/sit.JPG" class="d-block w-100 img-fluid" alt="Imagen 1">
+                    <div class="carousel-caption">
+                        <h2>Personal</h2>
+                        <p>Retratamos tu esencia como nadie lo ha hecho antes.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="IMG/JPG/sight.JPG" class="d-block w-100 img-fluid" alt="Imagen 2">
+                    <div class="carousel-caption">
+                        <h2>Etéreo</h2>
+                        <p>La fotografía es más de lo que crees.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="IMG/JPG/rocks.JPG" class="d-block w-100 img-fluid" alt="Imagen 3">
+                    <div class="carousel-caption">
+                        <h2>Disruptivo</h2>
+                        <p>Salimos de lo convencional, hacemos que cada sesión sea algo único.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
